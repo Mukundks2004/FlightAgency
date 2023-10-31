@@ -1,0 +1,49 @@
+.label {
+    -fx-font-size: 10pt;
+    -fx-font-family: Helvetica;
+    -fx-text-fill: #168FC1;
+    -fx-font-weight: bold;
+}
+
+.errorLabel {
+    -fx-text-fill: red;
+    -fx-text-weight: bold;
+}
+
+.heading {
+    /* style="-fx-font-size: 12pt; -fx-font-family: Helvetica; -fx-text-fill: #168FC1; -fx-font-weight: bold" */
+    -fx-font-size: 12pt;
+    -fx-font-family: Helvetica;
+    -fx-text-fill: #168FC1;
+    -fx-font-weight: bold;
+}
+
+.root {
+
+}
+
+.image {
+
+}
+
+.button{
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-size: 11pt;
+    -fx-font-weight: bold;
+    -fx-border-color:#168FC1; 
+    -fx-background-color:#168FC1;
+}
+
+.button:hover{     
+  -fx-background-color:#0B729C; 
+  -fx-text-fill:white;
+  -fx-font-weight:bold; 
+  fx-font-size: 11pt;
+  -fx-border-color:#168FC1; 
+}
+
+.textfield {
+    -fx-border-radius: 0;
+    -fx-background-color: rgb(226, 243, 255);
+}

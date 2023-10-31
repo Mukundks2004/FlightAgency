@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox fx:controller="controller.Destinations.DisplayDestinationsController" alignment="CENTER" styleClass="background" prefHeight="700.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView>
+        <image>
+            <Image url="@/image/destination.png"/>
+        </image>
+        <fitWidth>800.0</fitWidth>
+        <fitHeight>200.0</fitHeight>
+    </ImageView>
+    
+    <Separator/>
+        <Label text="Destinations" styleClass="heading" />
+    <Separator/>
+    
+    <TableView fx:id="destinationsTableView" prefWidth="800" prefHeight="500"> 
+        <columns>
+            <TableColumn text="Name" prefWidth="400">
+                <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+            </TableColumn>
+			<TableColumn text="Country" prefWidth="380">
+                <cellValueFactory><PropertyValueFactory property="country"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    
+    <GridPane alignment="CENTER">
+        <Button text="Close" fx:id="exitButton" onAction="#handleClose" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    </GridPane>
+
+    <stylesheets>
+        <URL value="@/view/style.css"/>
+    </stylesheets>
+</VBox>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.beans.property.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox fx:controller="controller.Flights.ExploreFlightsController" alignment="CENTER" styleClass="background" prefHeight="200.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView>
+        <image>
+            <Image url="@/image/flight.png"/>
+        </image>
+        <fitWidth>800.0</fitWidth>
+        <fitHeight>200.0</fitHeight>
+    </ImageView>
+    
+    <Separator/>
+        <Label fx:id="welcomeMessage" text="" styleClass="heading" />
+    <Separator/>
+    
+    
+    <GridPane alignment="CENTER">
+        <Button text="View all Flights" fx:id="viewFlightsButton" onAction="#viewAllFlights" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Button text="View Flights by Country" fx:id="viewFlightsCountryButton" onAction="#viewFlightsCountry" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        <Button text="Add Flight" fx:id="addFlightButton" onAction="#addFlight" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+        <Button text="Remove Flight" fx:id="removeFlightButton" onAction="#removeFlight" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+        <Button text="Close" fx:id="exitButton" onAction="#handleClose" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="4" GridPane.rowIndex="0"/>
+    </GridPane>
+
+    <stylesheets>
+        <URL value="@/view/style.css"/>
+    </stylesheets>
+</VBox>

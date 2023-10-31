@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+
+<VBox fx:controller="controller.Flights.DisplayFlightsController" alignment="CENTER" styleClass="background" prefHeight="800.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView>
+        <image>
+            <Image url="@/image/flight.png"/>
+        </image>
+        <fitWidth>800.0</fitWidth>
+        <fitHeight>200.0</fitHeight>
+    </ImageView>
+    
+    <Separator/>
+        <Label text="Filtered Flights" styleClass="heading" />
+    <Separator/>
+
+    <Label alignment="CENTER" text="Country" />
+    <TextField fx:id="countryFilter" maxWidth="Infinity" GridPane.hgrow="ALWAYS"/>
+
+    <TableView fx:id="flightsTv" prefWidth="800" prefHeight="500">
+        <columns>
+            <TableColumn text="Airline" prefWidth="160">
+                <cellValueFactory><PropertyValueFactory property="airline"/></cellValueFactory>
+            </TableColumn>
+			<TableColumn text="Flight Number" prefWidth="160">
+                <cellValueFactory><PropertyValueFactory property="flightNo"/></cellValueFactory>
+            </TableColumn>
+			<TableColumn text="Takeoff Country" prefWidth="160">
+                <cellValueFactory><PropertyValueFactory property="takeoff"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Landing Country" prefWidth="160">
+                <cellValueFactory><PropertyValueFactory property="landing"/></cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Cost" prefWidth="140">
+                <cellValueFactory><PropertyValueFactory property="cost"/></cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+    
+    <GridPane alignment="CENTER">
+        <Button text="Close" fx:id="exitButton" onAction="#handleClose" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    </GridPane>
+
+    <stylesheets>
+        <URL value="@/view/style.css"/>
+    </stylesheets>
+</VBox>

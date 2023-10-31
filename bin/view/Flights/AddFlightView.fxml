@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox fx:controller="controller.Flights.ModifyFlightsController" alignment="CENTER" styleClass="background" prefHeight="420.0" prefWidth="600.0" spacing="20" xmlns:fx="http://javafx.com/fxml/1">
+    <ImageView>
+        <image>
+            <Image url="@/image/destination.png"/>
+        </image>
+        <fitWidth>800.0</fitWidth>
+        <fitHeight>200.0</fitHeight>
+    </ImageView>
+    
+    <Separator/>
+        <Label text="Add a Flight" styleClass="heading" />
+    <Separator/>
+
+     <GridPane alignment="CENTER">
+        <Label text="Airline:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="airlineField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Flight Number:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="fnumberField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Takeoff:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="takeoffField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Label text="Landing:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <TextField fx:id="landingField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+        <Label text="Cost:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+        <TextField fx:id="costField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    </GridPane>
+    
+    <GridPane alignment="CENTER">
+        <Button text="Add Flight" disable="true" fx:id="addButton" onAction="#handleNewFlight" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Button text="Close" fx:id="exitButton" onAction="#handleClose" maxWidth="Infinity" GridPane.hgrow="ALWAYS" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+    </GridPane>
+    
+
+    <stylesheets>
+        <URL value="@/view/style.css"/>
+    </stylesheets>
+</VBox>
